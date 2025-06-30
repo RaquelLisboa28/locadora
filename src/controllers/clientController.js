@@ -1,5 +1,6 @@
 const clientRepository = require("../repositories/clientReposity");
 const { ObjectId } = require("mongodb");
+const { z } = require("zod");
 
 class ClientController {
   async index(req, res) {
@@ -16,7 +17,28 @@ class ClientController {
   }
 
   async store(req, res) {
-    const newClient = await clientRepository.insertOne(req.body);
+    const clientSchema = z.object({
+      name: z
+        .string({ message: "é necessário informar o nome." })
+        .min(1),
+      contact: z
+        .number({ message: "É necessário informar o contato." })
+        .min(11),
+      gender: z
+        .string({ message: "é necessário informar o sexo." })
+        .min(1),
+    });
+
+    const response = await clientSchema.safeParse(req.body);
+    if (!response.success) {
+      return res.status(400).json({
+        message: response.error.errors.map((error) => error.message).join(", "),
+      });
+    }
+
+    const data = response.data;
+
+    const newClient = await clientRepository.insertOne(data);
     res.json(newClient);
   }
 

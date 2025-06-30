@@ -14,10 +14,10 @@ class Db {
     return client.db(process.env.DB);
   }
 
-  async find() {
-    const db = await this.connectDb();
-    const cursor = await db.collection(this.table).find();
-    return await cursor.toArray();
+  async find(){
+    const db = await this.connectDb()
+    const cursor = await db.collection(this.table).find()
+    return await cursor.toArray()
   }
 
   async findOne(condicao) {

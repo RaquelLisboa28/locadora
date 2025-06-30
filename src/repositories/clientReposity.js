@@ -6,4 +6,4 @@ class ClientRepository extends Db {
   }
 }
 
-module.exports = new ClientRepository();
+module.exports = new ClientRepository();  
