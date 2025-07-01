@@ -42,7 +42,7 @@ Funcionalidades
 
 Como Executar
 - Clone o repositório:
-git clone https://github.com/seu-usuario/nome-do-repo.git
+git clone https://github.com/RaquelLisboa28/locadora
 cd nome-do-repo
 - Instale as dependências:
 npm install
