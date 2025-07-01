@@ -57,15 +57,15 @@ node src/server.js
 - Acesse a API em: http://localhost:7000
 
 Principais Endpoints
-| Método | Rota        | Descrição | 
-| GET    | /car        | Lista todos os carros | 
-| POST   | /car        | Cadastra um novo carro | 
-| GET    | /client     | Lista todos os clientes | 
-| POST   | /client     | Cadastra um novo cliente | 
-| GET    | /rental     | Lista todas as locações | 
-| POST   | /rental     | Cria uma nova locação | 
-| PUT    | /rental/:id/deliver | Finaliza uma locação (entrega) | 
-| DELETE | /rental/:id | Remove uma locação | 
+ Método | Rota        | Descrição | 
+ GET    | /car        | Lista todos os carros. 
+ POST   | /car        | Cadastra um novo carro.
+ GET    | /client     | Lista todos os clientes.  
+ POST   | /client     | Cadastra um novo cliente.
+ GET    | /rental     | Lista todas as locações. 
+ POST   | /rental     | Cria uma nova locação .
+ PUT    | /rental/:id/deliver | Finaliza uma locação (entrega). 
+ DELETE | /rental/:id | Remove uma locação.
 
 
 🧑‍💻 Autor
