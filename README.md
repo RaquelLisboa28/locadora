@@ -5,10 +5,10 @@ gerenciar uma locadora de veículos. Ele permite o cadastro de clientes, carros 
 locações, com controle de disponibilidade e entrega dos veículos.
 
 Estrutura do Projeto        
-src/
-├── config/           # Configuração do banco de dados
-│   └── db.js
-├── controllers/      # Lógica dos endpoints
+src/ 
+├──  config/           # Configuração do banco de dados
+│    └── db.js
+├──  controllers/      # Lógica dos endpoints
 │   ├── carController.js
 │   ├── clientController.js
 │   └── rentalController.js
@@ -43,14 +43,17 @@ Funcionalidades
 Como Executar
 - Clone o repositório:
 git clone https://github.com/RaquelLisboa28/locadora
-cd nome-do-repo
+
 - Instale as dependências:
 npm install
+
 - Configure o arquivo .env:
 NODE_PORT=7000
 DB=rentalCompany
+
 - Inicie o servidor:
 node src/server.js
+
 - Acesse a API em: http://localhost:7000
 
 Principais Endpoints
